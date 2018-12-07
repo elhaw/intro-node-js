@@ -1,3 +1,4 @@
+
 window.App = window.App || {}
 
 window.App.showPostsForCurrentUser = (userId, cb) => {
@@ -14,8 +15,8 @@ window.App.showPostsForCurrentUser = (userId, cb) => {
   })
 }
 
-window.App.showUserProfile = (userId, cb) => {
-  window.App.getUserById(userId, user => {
+App.showUserProfile = (userId, cb) => {
+  App.getUserById(userId, user => {
     const profile = `
       <div>
         ${user.name}

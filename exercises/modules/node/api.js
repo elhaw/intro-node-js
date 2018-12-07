@@ -1,20 +1,17 @@
-const {App}= require('./data')
-App = App || {}
+const {users,posts} = require('./data')
 
-App.getUserById = (id, cb) => {
+const getUserById = (id, cb) => {
   // simulate API call
-  setTimeout(() => {
-    const user = App.users.find(user => user.id === id)
+  window.setTimeout(() => {
+    const user = users.find(user => user.id === id)
     cb(user)
   }, 150)
 }
 
-App.getPostsForUser = (userId, cb) => {
+const getPostsForUser = (userId, cb) => {
   // simulate API call
-  setTimeout(() => {
-    const posts = App.posts.filter(post => post.createdBy === userId)
-    cb(posts)
+  window.setTimeout(() => {
+    const _posts = posts.filter(post => post.createdBy === userId)
+    cb(_posts)
   }, 150)
 }
-
-module.exports ={App}
